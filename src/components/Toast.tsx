@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { CloseIcon } from './Icons.tsx';
+import { CloseIcon } from './Icons';
 
 export interface ToastMessage {
   id: number;

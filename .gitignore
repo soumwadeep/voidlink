@@ -1,6 +1,5 @@
 node_modules/
 dist/
-.qoder.site
 *.log
 .DS_Store
 .env
@@ -8,5 +7,6 @@ dist/
 coverage/
 test-results/
 playwright-report/
-*.qoder.site
 .chrome-profile/
+.vercel/
+.pgtest/

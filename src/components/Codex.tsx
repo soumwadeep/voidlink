@@ -1,5 +1,5 @@
-import { Modal } from './Modal.tsx';
-import { CloseIcon, LockIcon, WifiOffIcon } from './Icons.tsx';
+import { Modal } from './Modal';
+import { CloseIcon, LockIcon, WifiOffIcon } from './Icons';
 
 interface CodexProps {
   open: boolean;

@@ -1,8 +1,8 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { createApiHandler } from '../shared/api.ts';
-import { createGameService } from '../shared/service.ts';
-import { MemoryStore } from '../server/memory-store.ts';
-import { cellIndex } from '../shared/engine.ts';
+import { createApiHandler } from '../shared/api';
+import { createGameService } from '../shared/service';
+import { MemoryStore } from '../server/memory-store';
+import { cellIndex } from '../shared/engine';
 
 interface Harness {
   store: MemoryStore;
@@ -42,7 +42,7 @@ function createHarness(seed = 12345): Harness {
       body = JSON.stringify(options.body);
     }
     const response = await handler(
-      new Request(`http://127.0.0.1/functions/v1/app${path}`, {
+      new Request(`http://127.0.0.1${path}`, {
         method,
         headers,
         body,

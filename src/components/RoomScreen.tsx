@@ -1,13 +1,13 @@
 import { useEffect, useRef } from 'react';
-import type { RoomView } from '../../shared/protocol.ts';
-import type { VoidlinkApiError } from '../lib/api.ts';
-import { copyText, roomUrl } from '../lib/format.ts';
-import { play } from '../lib/sound.ts';
-import type { RoomFeed } from '../lib/useRoom.ts';
-import type { ToastMessage } from './Toast.tsx';
-import { Game } from './Game.tsx';
-import { Lobby } from './Lobby.tsx';
-import { ArrowLeft, RefreshIcon, SignalIcon } from './Icons.tsx';
+import type { RoomView } from '../../shared/protocol';
+import type { VoidlinkApiError } from '../lib/api';
+import { copyText, roomUrl } from '../lib/format';
+import { play } from '../lib/sound';
+import type { RoomFeed } from '../lib/useRoom';
+import type { ToastMessage } from './Toast';
+import { Game } from './Game';
+import { Lobby } from './Lobby';
+import { ArrowLeft, RefreshIcon, SignalIcon } from './Icons';
 
 interface RoomScreenProps {
   code: string;

@@ -14,8 +14,8 @@ import {
   type BoardSize,
   type Cell,
   type Side,
-} from '../../shared/engine.ts';
-import { useHexGeometry } from '../lib/hex.ts';
+} from '../../shared/engine';
+import { useHexGeometry } from '../lib/hex';
 
 interface BoardProps {
   size: BoardSize;

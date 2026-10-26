@@ -20,8 +20,8 @@ import {
   type Cell,
   type GameState,
   type Side,
-} from '../shared/engine.ts';
-import { chooseAiMove, playAiGame, type AiDifficulty } from '../shared/ai.ts';
+} from '../shared/engine';
+import { chooseAiMove, playAiGame, type AiDifficulty } from '../shared/ai';
 
 function seeded(seed: number) {
   let value = seed >>> 0;

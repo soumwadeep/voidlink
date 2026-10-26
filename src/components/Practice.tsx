@@ -5,11 +5,11 @@ import {
   otherSide,
   type GameState,
   type Side,
-} from '../../shared/engine.ts';
-import { AI_DIFFICULTIES, chooseAiMove, type AiDifficulty } from '../../shared/ai.ts';
-import type { PracticeSetup } from '../App.tsx';
-import { Board } from './Board.tsx';
-import { Modal } from './Modal.tsx';
+} from '../../shared/engine';
+import { AI_DIFFICULTIES, chooseAiMove, type AiDifficulty } from '../../shared/ai';
+import type { PracticeSetup } from '../App';
+import { Board } from './Board';
+import { Modal } from './Modal';
 import {
   ArrowLeft,
   ArrowRight,
@@ -19,8 +19,8 @@ import {
   RefreshIcon,
   SignalIcon,
   SparkIcon,
-} from './Icons.tsx';
-import { haptic, play } from '../lib/sound.ts';
+} from './Icons';
+import { haptic, play } from '../lib/sound';
 
 interface PracticeProps {
   setup: PracticeSetup;

@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
-import { applyMove, createGame, cellIndex } from '../../shared/engine.ts';
-import { Board } from './Board.tsx';
-import { SignalIcon } from './Icons.tsx';
+import { applyMove, createGame, cellIndex } from '../../shared/engine';
+import { Board } from './Board';
+import { SignalIcon } from './Icons';
 
 /**
  * A deterministic, non-interactive position used as the landing illustration.

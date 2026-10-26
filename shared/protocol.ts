@@ -1,6 +1,6 @@
-import type { BoardSize, Side } from './engine.ts';
+import type { BoardSize, Side } from './engine';
 
-export const API_BASE = '/functions/v1/app/api';
+export const API_BASE = '/api';
 export const ROOM_CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 export const ROOM_CODE_LENGTH = 6;
 export const ROOM_CODE_PATTERN = /^[A-HJ-NP-Z2-9]{6}$/;

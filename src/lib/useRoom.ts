@@ -3,8 +3,8 @@ import {
   HEARTBEAT_INTERVAL_MS,
   POLL_INTERVAL_MS,
   type RoomView,
-} from '../../shared/protocol.ts';
-import { VoidlinkApiError, apiRequest } from './api.ts';
+} from '../../shared/protocol';
+import { VoidlinkApiError, apiRequest } from './api';
 
 export type LinkState = 'connecting' | 'live' | 'lost';
 

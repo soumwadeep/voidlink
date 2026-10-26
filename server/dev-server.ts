@@ -1,8 +1,8 @@
 import { createServer, type Server } from 'node:http';
 import { pathToFileURL } from 'node:url';
-import { createApiHandler } from '../shared/api.ts';
-import { createGameService, type ServiceOptions } from '../shared/service.ts';
-import { MemoryStore } from './memory-store.ts';
+import { createApiHandler } from '../shared/api';
+import { createGameService, type ServiceOptions } from '../shared/service';
+import { MemoryStore } from './memory-store';
 
 export interface DevServerOptions {
   port?: number;

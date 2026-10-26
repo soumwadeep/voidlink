@@ -1,4 +1,4 @@
-import { API_BASE } from '../../shared/protocol.ts';
+import { API_BASE } from '../../shared/protocol';
 
 export class VoidlinkApiError extends Error {
   code: string;

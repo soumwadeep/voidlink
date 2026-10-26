@@ -1,5 +1,5 @@
 import { useId, useMemo } from 'react';
-import type { BoardSize } from '../../shared/engine.ts';
+import type { BoardSize } from '../../shared/engine';
 
 export interface HexGeometry {
   size: BoardSize;

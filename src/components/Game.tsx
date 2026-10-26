@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import type { Cell, Side } from '../../shared/engine.ts';
+import type { Cell, Side } from '../../shared/engine';
 import {
   FORFEIT_AFTER_MS,
   SIGNAL_DEFINITIONS,
@@ -8,8 +8,8 @@ import {
   type SeatNumber,
   type SignalKind,
   type SignalView,
-} from '../../shared/protocol.ts';
-import { VoidlinkApiError, apiRequest } from '../lib/api.ts';
+} from '../../shared/protocol';
+import { VoidlinkApiError, apiRequest } from '../lib/api';
 import {
   copyText,
   elapsedSince,
@@ -18,12 +18,12 @@ import {
   gateLabel,
   roomUrl,
   sideLabel,
-} from '../lib/format.ts';
-import { play, haptic } from '../lib/sound.ts';
-import type { LinkState } from '../lib/useRoom.ts';
-import { useNow } from '../lib/useNow.ts';
-import type { ToastMessage } from './Toast.tsx';
-import { Board } from './Board.tsx';
+} from '../lib/format';
+import { play, haptic } from '../lib/sound';
+import type { LinkState } from '../lib/useRoom';
+import { useNow } from '../lib/useNow';
+import type { ToastMessage } from './Toast';
+import { Board } from './Board';
 import {
   ArrowRight,
   CloseIcon,
@@ -36,8 +36,8 @@ import {
   SignalIcon,
   SparkIcon,
   WifiOffIcon,
-} from './Icons.tsx';
-import { Modal } from './Modal.tsx';
+} from './Icons';
+import { Modal } from './Modal';
 
 interface GameProps {
   room: RoomView;

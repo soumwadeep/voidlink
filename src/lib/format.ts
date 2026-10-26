@@ -1,4 +1,4 @@
-import type { RoomView, SeatNumber } from '../../shared/protocol.ts';
+import type { RoomView, SeatNumber } from '../../shared/protocol';
 
 export function formatClock(ms: number): string {
   if (!Number.isFinite(ms) || ms < 0) ms = 0;
@@ -35,7 +35,7 @@ export function roomUrl(code: string): string {
 }
 
 export function cleanShareUrl(url: string): string {
-  // Qoder previews add query parameters; the room is all a rival needs.
+  // Deployment previews may add query parameters; the room is all a rival needs.
   try {
     const parsed = new URL(url);
     const room = parsed.searchParams.get('room');

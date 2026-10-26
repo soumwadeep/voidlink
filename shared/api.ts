@@ -1,13 +1,12 @@
-import { GameError, ERROR_MESSAGE, type GameService } from './service.ts';
-import { MAX_BODY_BYTES } from './protocol.ts';
+import { GameError, ERROR_MESSAGE, type GameService } from './service';
+import { MAX_BODY_BYTES } from './protocol';
 
 /**
- * Transport-agnostic HTTP layer. The local Node server and the deployed Qoder
- * Function both call this with a standard Web `Request`, so route handling,
- * validation and error shapes cannot drift between environments.
+ * Transport-agnostic HTTP layer. The local Node relay and the Vercel Function
+ * both call this with a standard Web `Request`, so route handling, validation
+ * and error shapes cannot drift between environments.
  */
 
-const FUNCTION_PATH = /^\/(?:functions\/v1\/)?(?:app|app-d[0-9a-f]{32})(\/.*)?$/;
 const ROOM_PATH = /^\/api\/rooms\/([A-Za-z0-9-]{1,12})(?:\/(join|move|swap|resign|forfeit|rematch|heartbeat|cancel|signal))?$/;
 
 const JSON_HEADERS = {
@@ -85,12 +84,11 @@ export function createApiHandler(service: GameService) {
   return async function handle(request: Request): Promise<Response> {
     const requestId = crypto.randomUUID();
     const url = new URL(request.url);
-    const outer = FUNCTION_PATH.exec(url.pathname);
-    if (!outer) {
+    let path = url.pathname;
+    if (path.length > 1 && path.endsWith('/')) path = path.slice(0, -1);
+    if (path !== '/api' && !path.startsWith('/api/')) {
       return fail('not_found', 'No such relay route.', 404, requestId);
     }
-    let path = outer[1] ?? '/';
-    if (path.length > 1 && path.endsWith('/')) path = path.slice(0, -1);
     const token = tokenOf(request);
 
     try {

@@ -4,11 +4,11 @@ import {
   normaliseName,
   type EnterRoomResponse,
   type RoomView,
-} from '../../shared/protocol.ts';
-import { sideLabel } from '../lib/format.ts';
-import { loadCallsign } from '../lib/session.ts';
-import { VoidlinkApiError, apiRequest } from '../lib/api.ts';
-import { ArrowLeft, ArrowRight, LinkIcon, LockIcon, RefreshIcon, UsersIcon } from './Icons.tsx';
+} from '../../shared/protocol';
+import { sideLabel } from '../lib/format';
+import { loadCallsign } from '../lib/session';
+import { VoidlinkApiError, apiRequest } from '../lib/api';
+import { ArrowLeft, ArrowRight, LinkIcon, LockIcon, RefreshIcon, UsersIcon } from './Icons';
 
 interface JoinScreenProps {
   code: string;

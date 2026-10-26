@@ -2,8 +2,8 @@ import type {
   RoomRow,
   RoomStore,
   SeatRow,
-} from '../shared/service.ts';
-import type { SignalKind } from '../shared/protocol.ts';
+} from '../shared/service';
+import type { SignalKind } from '../shared/protocol';
 
 function cloneRoom(row: RoomRow): RoomRow {
   return { ...row };

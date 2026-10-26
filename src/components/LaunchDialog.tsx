@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { MAX_NAME_LENGTH, normaliseName } from '../../shared/protocol.ts';
-import type { AiDifficulty } from '../../shared/ai.ts';
-import { AI_DIFFICULTIES } from '../../shared/ai.ts';
-import type { BoardSize, Side } from '../../shared/engine.ts';
-import { CloseIcon, GridIcon, LockIcon, SparkIcon, UsersIcon } from './Icons.tsx';
-import { Modal } from './Modal.tsx';
+import { MAX_NAME_LENGTH, normaliseName } from '../../shared/protocol';
+import type { AiDifficulty } from '../../shared/ai';
+import { AI_DIFFICULTIES } from '../../shared/ai';
+import type { BoardSize, Side } from '../../shared/engine';
+import { CloseIcon, GridIcon, LockIcon, SparkIcon, UsersIcon } from './Icons';
+import { Modal } from './Modal';
 
 export type LaunchMode = 'create' | 'quick' | 'spar';
 

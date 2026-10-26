@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { ROOM_CODE_LENGTH } from '../../shared/protocol.ts';
-import { LatticePreview } from './LatticePreview.tsx';
-import { ArrowRight, BoltIcon, LockIcon, SparkIcon, UsersIcon } from './Icons.tsx';
-import type { LaunchMode } from './LaunchDialog.tsx';
+import { ROOM_CODE_LENGTH } from '../../shared/protocol';
+import { LatticePreview } from './LatticePreview';
+import { ArrowRight, BoltIcon, LockIcon, SparkIcon, UsersIcon } from './Icons';
+import type { LaunchMode } from './LaunchDialog';
 
 interface HomeProps {
   onLaunch: (mode: LaunchMode) => void;

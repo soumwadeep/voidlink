@@ -2,7 +2,7 @@ import {
   generateCallsign,
   normaliseName,
   type SeatNumber,
-} from '../../shared/protocol.ts';
+} from '../../shared/protocol';
 
 const CALLSIGN_KEY = 'voidlink.callsign.v1';
 const SESSION_PREFIX = 'voidlink.session.v1.';

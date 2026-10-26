@@ -13,11 +13,10 @@
     "exactOptionalPropertyTypes": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "types": ["node"]
   },
-  "include": ["src", "shared", "server", "tests", "vite.config.ts", "vitest.config.ts"]
+  "include": ["src", "shared", "server", "api", "tests", "vite.config.ts", "vitest.config.ts"]
 }

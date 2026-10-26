@@ -7,7 +7,7 @@ import {
   type Cell,
   type GameState,
   type Side,
-} from './engine.ts';
+} from './engine';
 import {
   FORFEIT_AFTER_MS,
   ONLINE_WINDOW_MS,
@@ -25,14 +25,14 @@ import {
   type RoomView,
   type SeatNumber,
   type SignalKind,
-} from './protocol.ts';
+} from './protocol';
 
 /* ------------------------------------------------------------------ *
  * Storage contract
  *
- * The local server uses an in-memory implementation; the published Qoder
- * Function uses the same contract over the platform database. Keeping every
- * rule in this file means local play and live play execute identical logic.
+ * The local server uses an in-memory implementation; the hosted API uses a
+ * Postgres implementation of the same contract. Keeping every rule in this
+ * file means local play and live play execute identical logic.
  * ------------------------------------------------------------------ */
 
 export interface RoomRow {

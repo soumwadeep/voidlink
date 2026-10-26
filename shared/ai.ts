@@ -8,7 +8,7 @@ import {
   winningCells,
   type GameState,
   type Side,
-} from './engine.ts';
+} from './engine';
 
 export type AiDifficulty = 'cadet' | 'veteran' | 'ace';
 

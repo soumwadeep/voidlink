@@ -1,4 +1,4 @@
-import type { LinkState } from '../lib/useRoom.ts';
+import type { LinkState } from '../lib/useRoom';
 import {
   ArrowLeft,
   BookIcon,
@@ -7,7 +7,7 @@ import {
   SoundOnIcon,
   WifiIcon,
   WifiOffIcon,
-} from './Icons.tsx';
+} from './Icons';
 
 interface TopBarProps {
   roomCode?: string | null;

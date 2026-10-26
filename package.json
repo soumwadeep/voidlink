@@ -12,19 +12,19 @@
     "preview": "vite preview --host 127.0.0.1",
     "test": "vitest run",
     "test:watch": "vitest",
-    "check": "npm run verify:function-sync && npm run test && npm run build",
-    "sync:function": "node scripts/sync-function.mjs",
-    "verify:function-sync": "node scripts/sync-function.mjs --check"
+    "check": "npm run test && npm run build"
   },
   "dependencies": {
     "@fontsource-variable/space-grotesk": "^5.2.10",
     "@fontsource/chakra-petch": "^5.2.10",
     "@fontsource/jetbrains-mono": "^5.2.10",
+    "pg": "^8.23.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@types/node": "^24.10.0",
+    "@types/pg": "^8.23.1",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react": "^5.1.0",

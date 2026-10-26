@@ -1,5 +1,5 @@
-import type { RoomView } from '../../shared/protocol.ts';
-import { gateLabel, roomUrl, sideLabel } from '../lib/format.ts';
+import type { RoomView } from '../../shared/protocol';
+import { gateLabel, roomUrl, sideLabel } from '../lib/format';
 import {
   ArrowRight,
   CopyIcon,
@@ -8,7 +8,7 @@ import {
   ShareIcon,
   SparkIcon,
   UsersIcon,
-} from './Icons.tsx';
+} from './Icons';
 
 interface LobbyProps {
   room: RoomView;

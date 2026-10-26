@@ -1,36 +1,36 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import type { BoardSize, Side } from '../shared/engine.ts';
+import type { BoardSize, Side } from '../shared/engine';
 import {
   normaliseRoomCode,
   type EnterRoomResponse,
   type RoomView,
-} from '../shared/protocol.ts';
-import type { AiDifficulty } from '../shared/ai.ts';
-import { apiRequest, VoidlinkApiError } from './lib/api.ts';
-import { copyText, finishHeadline } from './lib/format.ts';
+} from '../shared/protocol';
+import type { AiDifficulty } from '../shared/ai';
+import { apiRequest, VoidlinkApiError } from './lib/api';
+import { copyText, finishHeadline } from './lib/format';
 import {
   loadCallsign,
   loadSession,
   saveCallsign,
   saveSession,
-} from './lib/session.ts';
+} from './lib/session';
 import {
   haptic,
   isMuted,
   play,
   setMuted as persistMuted,
-} from './lib/sound.ts';
-import { useRoom } from './lib/useRoom.ts';
-import { Home } from './components/Home.tsx';
-import { JoinScreen } from './components/JoinScreen.tsx';
-import { RoomScreen } from './components/RoomScreen.tsx';
-import { Practice } from './components/Practice.tsx';
-import { Codex } from './components/Codex.tsx';
-import { LaunchDialog, type LaunchConfig, type LaunchMode } from './components/LaunchDialog.tsx';
-import { Modal } from './components/Modal.tsx';
-import { Toast, type ToastMessage } from './components/Toast.tsx';
-import { TopBar } from './components/TopBar.tsx';
-import { ArrowLeft, ArrowRight, CloseIcon } from './components/Icons.tsx';
+} from './lib/sound';
+import { useRoom } from './lib/useRoom';
+import { Home } from './components/Home';
+import { JoinScreen } from './components/JoinScreen';
+import { RoomScreen } from './components/RoomScreen';
+import { Practice } from './components/Practice';
+import { Codex } from './components/Codex';
+import { LaunchDialog, type LaunchConfig, type LaunchMode } from './components/LaunchDialog';
+import { Modal } from './components/Modal';
+import { Toast, type ToastMessage } from './components/Toast';
+import { TopBar } from './components/TopBar';
+import { ArrowLeft, ArrowRight, CloseIcon } from './components/Icons';
 
 type View = 'home' | 'join' | 'room' | 'practice';
 
