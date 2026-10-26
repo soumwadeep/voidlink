@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.qoder.site
+*.log
+.DS_Store
+.env
+.env.*
+coverage/
+test-results/
+playwright-report/
+*.qoder.site
+.chrome-profile/

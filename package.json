@@ -1,0 +1,40 @@
+{
+  "name": "voidlink",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VOIDLINK — a cross-device multiplayer hex-lattice duel.",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c cyan,magenta \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "tsx server/dev-server.ts",
+    "dev:web": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run verify:function-sync && npm run test && npm run build",
+    "sync:function": "node scripts/sync-function.mjs",
+    "verify:function-sync": "node scripts/sync-function.mjs --check"
+  },
+  "dependencies": {
+    "@fontsource-variable/space-grotesk": "^5.2.10",
+    "@fontsource/chakra-petch": "^5.2.10",
+    "@fontsource/jetbrains-mono": "^5.2.10",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.0",
+    "concurrently": "^9.2.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.2",
+    "vitest": "^4.0.14"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}
